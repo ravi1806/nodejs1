@@ -18,6 +18,6 @@ http.createServer(function (req,res) {
     } else
     {
         res.writeHead(404);
-        res.end('Page not Found');
+        res.end('Erroe 404, Page not Found');
     }
 }).listen(1337, '127.0.0.1');
