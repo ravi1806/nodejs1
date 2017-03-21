@@ -43,3 +43,26 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 	* ~ means update only with patch.
 * npm install packagename --save-dev will add the dependency in devDependencies which aren't needed to run the app.
 * npm install -g packagename installed the package globally. they too aren't needed to run the app.  
+
+
+## EXPRESS
+
+* HTTP Method: Specifies the type of action the request wants to make -> GET,POST,DELETE etc. called VERBS. 
+
+```js
+	var express = require('express'); /* returns a function express so we need to call this */
+	var app = express(); /*app is also a function, express function called here on which we have properties and method */
+	
+	var port = process.env.PORT || 3000; /* process is a global object provided by node, env is for environment and PORT is env variable */	
+	
+	app.get('URL', CBfunction(req, res) {
+	 res.send('SOME HTML'); /* Not reqd to mention the content type */
+	});
+	
+	app.post('URL', CBfunction(req, res) {});
+	
+	app.listen(port);
+	
+```
+
+* 
