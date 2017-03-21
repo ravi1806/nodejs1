@@ -48,7 +48,21 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 ## EXPRESS
 
 * HTTP Method: Specifies the type of action the request wants to make -> GET,POST,DELETE etc. called VERBS. 
-
+* A GET Request->
+	```
+	   GET/?id=4&page=3 HTTP/1.1
+	   HOST:www.learnweb.net
+	   Cookie:username=abc;name=Rau
+	```
+* A POST Request of form->
+	```
+	  POST/HTTP/1.1
+	  Host:www.learnweb.net
+	  Content-Type:application/x-www-form-urlencoded
+	  Cookie:num=4;page=2
+	  
+	  username=Rau&password=pwd
+	```
 ```js
 	var express = require('express'); /* returns a function express so we need to call this */
 	var app = express(); /*app is also a function, express function called here on which we have properties and method */
@@ -65,4 +79,4 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 	
 ```
 
-* 
+
