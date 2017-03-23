@@ -92,5 +92,11 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 * When we don't specify a route in the app.use, it will use it always(for all routes). eg. `app.use(cookieParser());`
 
 
+### Template and Template Engines
 
+* First, you can either change the views location or let it be default at `app.set('views','./views');` i.e views folder.
+* Install a template engine such as ejs/jade. eg. `npm install --save ejs`
+* Next set the view engine by `app.set('view engine', 'file extension/template engine');`
+* the files in the views folder will have an extension of the template engine.
+* Inside app.get, apply render to res and use eg. `res.render('person',{ID: req.params.id});` where second param is optional.
 
