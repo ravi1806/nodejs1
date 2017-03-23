@@ -99,4 +99,6 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 * Next set the view engine by `app.set('view engine', 'file extension/template engine');`
 * the files in the views folder will have an extension of the template engine.
 * Inside app.get, apply render to res and use eg. `res.render('person',{ID: req.params.id});` where second param is optional.
+* A very imp. thing to note here is that when we link the css in the html, don't foreget to put / before the path to make it as root. Otherwise, browser will look for a folder instead of using the middleware.
+
 
