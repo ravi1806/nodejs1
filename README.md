@@ -79,4 +79,18 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 	
 ```
 
+### Middleware and Static Files
+
+* Whatever happens between the request and response comes under middleware.(code sitting btw req and res)
+* Middleware can have multiple layers of levels.
+* Static files are those which are not processed by code, eg. html, css and image files.
+* We use the middleware to push these static files to the server, so they can be accessed by the req. without manual resp.
+* To use the middleware we use `app.use('routeHere', middleware(pathOfFile));`
+* In app.get everytime we see routeHere/SomeFile it will go find pathOfFile/SomeFile and stream the response back.
+* We can use our own Middleware as a callback function `app.use('routeHere', CallbackFunction(req,resp,next){});`
+* next() means run the next middleware.
+* When we don't specify a route in the app.use, it will use it always(for all routes). eg. `app.use(cookieParser());`
+
+
+
 
