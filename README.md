@@ -111,3 +111,20 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 * For POST, we need to parse the body of HTTP req. for which we use middleware such as body-parser `npm install --save body-parser`
 * It wont work like a view engine middleware, this we need to take from the module using require `var bodyParser=require('body-parser');`
 * See the example code [Example Route specific](https://expressjs.com/en/resources/middleware/body-parser.html) and use in app.post where urlencodedParser works as a callback function.
+
+
+### REST API
+
+* REST(Representational State Transfer) is an architectural style for building API(Application Progaram Interface) in here we decide that VERBS(GET,POST,DELETE) and URLs mean something. Its just a structure like below.
+
+```js
+app.get('URL', function(req,res) {
+ //Get somethin from the database
+});
+app.post('URL', function(req,res) {
+ //POST somethin to the database
+});
+app.delete('URL', function(req,res) {
+ //Delete somethin from the database
+});
+```
