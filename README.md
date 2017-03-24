@@ -101,4 +101,13 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 * Inside app.get, apply render to res and use eg. `res.render('person',{ID: req.params.id});` where second param is optional.
 * A very imp. thing to note here is that when we link the css in the html, don't foreget to put / before the path. eg.`href=/assets/style.css`
 
+### Querystring and Post Parameters
 
+* When a browser sends a GET request, the querystring (string after ? in url) appears in the url cos its in the header of the HTTP request.
+* So we need to parse the HTTP req. to pull out that querystring to use it in our code.
+* In case of POST(form) the querystring is moved into the body of the HTTP req. and thus we dont see it in the URL.
+* We generally POST two types of data -> urlencoded and json data which have different methods to be posted.
+* A GET request, is the easiest to process. All we have to do is add a property in the object of app.get eg. `res.render('person',{ID: req.params.id, QueryString: req.query.name});`
+* For POST, we need to parse the body of HTTP req. for which we use middleware such as body-parser `npm install --save body-parser`
+* It wont work like a view engine middleware, this we need to take from the module using require `var bodyParser=require('body-parser');`
+* See the example code [Example Route specific](https://expressjs.com/en/resources/middleware/body-parser.html) and use in app.post where urlencodedParser works as a callback function.
