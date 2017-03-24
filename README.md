@@ -79,4 +79,26 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 	
 ```
 
+### Middleware and Static Files
+
+* Whatever happens between the request and response comes under middleware.(code sitting btw req and res)
+* Middleware can have multiple layers of levels.
+* Static files are those which are not processed by code, eg. html, css and image files.
+* We use the middleware to push these static files to the server, so they can be accessed by the req. without manual resp.
+* To use the middleware we use `app.use('routeHere', middleware(pathOfFile));`
+* In app.get everytime we see routeHere/SomeFile it will go find pathOfFile/SomeFile and stream the response back.
+* We can use our own Middleware as a callback function `app.use('routeHere', CallbackFunction(req,resp,next){});`
+* next() means run the next middleware.
+* When we don't specify a route in the app.use, it will use it always(for all routes). eg. `app.use(cookieParser());`
+
+
+### Template and Template Engines
+
+* First, you can either change the views location or let it be default at `app.set('views','./views');` i.e views folder.
+* Install a template engine such as ejs/jade. eg. `npm install --save ejs`
+* Next set the view engine by `app.set('view engine', 'file extension/template engine');`
+* the files in the views folder will have an extension of the template engine.
+* Inside app.get, apply render to res and use eg. `res.render('person',{ID: req.params.id});` where second param is optional.
+* A very imp. thing to note here is that when we link the css in the html, don't foreget to put / before the path. eg.`href=/assets/style.css`
+
 
