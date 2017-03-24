@@ -128,3 +128,10 @@ app.delete('URL', function(req,res) {
  //Delete somethin from the database
 });
 ```
+## NODE and MYSQL
+
+* `npm isntall --save mysql` and then read the [documentation](https://www.npmjs.com/package/mysql) to get started.
+
+## NODE and MONGOOSE
+
+* `npm install --savem mongoose` and then read the [documentation](https://www.npmjs.com/package/mongoose).
