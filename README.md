@@ -47,7 +47,7 @@ Content-Type: text/html /* MIME(Multipurpose Internet Mail Extenstions) type */
 
 ## EXPRESS
 
-* HTTP Method: Specifies the type of action the request wants to make -> GET,POST,DELETE etc. called VERBS. 
+* HTTP Method: Specifies the type of action the request wants to make -> GET,POST,DELETE etc. called **VERBS**. 
 * A GET Request->
 	```
 	   GET/?id=4&page=3 HTTP/1.1
